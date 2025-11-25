@@ -1,0 +1,201 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+section{
+    padding: 2rem;
+}
+
+.sobre_mi{
+    background-color: #333;
+    color: #fff;
+}
+
+.yo{
+    border-radius: 40%;
+    border: 5px solid #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+}
+
+.yo2 {
+    border-radius: 1.2rem;
+    margin: 1.5rem auto;
+    max-width: 320px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+/* Efecto hover con movimiento y sombra */
+.yo2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+}
+
+/* Overlay degradado para desvanecer bordes */
+.yo2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle, rgba(255,255,255,0) 70%, rgba(255,255,255,0.9) 100%);
+    pointer-events: none;
+}
+
+/* Sutil borde con efecto glass */
+.yo2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+    pointer-events: none;
+}
+ 
+/* From Uiverse.io by _7754 */ 
+.container {
+  display: flex;
+  column-gap: 28px;
+}
+
+.icon {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  font-size: 25px;
+  outline: 2px solid white;
+  border-radius: 50%;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+  color: white;
+}
+
+.icon:hover {
+  outline-offset: 4px;
+}
+
+.icon svg {
+  margin: auto;
+  width: 31px;
+}
+
+.icon-Yt:hover {
+  background-color: red;
+  outline-color: red;
+}
+
+.icon-dis:hover {
+  background-color:#128c7e;
+  outline-color: #128c7e;
+  
+}
+
+.icon-github:hover {
+  background-color: #555555;
+  outline-color: #555555;
+}
+
+.icon-in:hover {
+  background-color: #0a66c2;
+  outline-color: #0a66c2;
+}
+
+.icon:hover svg {
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+  transform: scale(1.2);
+}
+/* From Uiverse.io by gharsh11032000 */ 
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 10px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
